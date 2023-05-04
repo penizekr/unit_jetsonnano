@@ -9,3 +9,23 @@
 &nbsp;
 - Info about JetsonNano: https://developer.nvidia.com/embedded/jetson-nano-developer-kit  
 - This info: https://github.com/penizekr/unit_jetsonnano/edit/main/README.md
+
+# wifi modem TP-Link TL-WN821N v6  
+
+download and extract: https://github.com/Mange/rtl8192eu-linux-driver  
+change in file "Makefile" : 
+CONFIG_PLATFORM_I386_PC = n  
+CONFIG_PLATFORM_ARM_AARCH64 = y  
+
+run: make
+run: sudo make install 
+
+open file: sudo nano /etc/modules  
+add into file:  
+  8192eu  
+
+  loop  
+
+reboot JetsonNano  
+
+
